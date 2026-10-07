@@ -1,0 +1,1 @@
+ <main>App components go here</main>
