@@ -1,6 +1,11 @@
-<main class="container-fluid bg-secondary text-center">
-      <table class="table table-warning table-striped-columns">
-        <thead class="table-dark">
+import React from 'react';
+import './scores.css';
+
+export function Scores() {
+  return (
+    <main className="container-fluid bg-secondary text-center">
+      <table className="table table-warning table-striped-columns">
+        <thead className="table-dark">
           <tr>
             <th>#</th>
             <th>Name</th>
@@ -30,3 +35,5 @@
         </tbody>
       </table>
     </main>
+  );
+}
