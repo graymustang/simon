@@ -10,12 +10,16 @@ import { NotFound } from "./notfound/notfound";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="body bg-dark text-light">
+      <div className="app-shell bg-dark text-light">
         <header className="container-fluid">
           <nav className="navbar fixed-top navbar-dark">
-            <div className="navbar-brand">
+            <NavLink
+              className="navbar-brand text-light text-decoration-none"
+              to="/"
+              aria-label="Simon home"
+            >
               Simon<sup>&reg;</sup>
-            </div>
+            </NavLink>
             <menu className="navbar-nav">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
