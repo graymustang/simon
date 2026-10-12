@@ -22,7 +22,7 @@ export default function App() {
             </NavLink>
             <menu className="navbar-nav">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">
+                <NavLink className="nav-link" to="/" end>
                   Login
                 </NavLink>
               </li>

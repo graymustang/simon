@@ -2,7 +2,6 @@
   "name": "simon-react-p1",
   "version": "1.0.0",
   "description": "Simon React Part 1 routing project",
-  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -101,5 +101,5 @@ For this deliverable I did the following. I checked the box [x] and added a desc
 - [x] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
 - [x] Bundled using Vite - Converted my website to use Vite to be able to run and build the application.
   the app from `src/app.jsx`.
-- [x] Components - Converted my HTML pages into React components for Home, Log a Round, Stats, Courses, Gallery, and Login.
+- [x] Components - Converted my HTML pages into React components for Login, Play, Scores, About.
 - [x] Router - Used React Router to navigate between each component without separate HTML pages.
