@@ -1,12 +1,13 @@
 import React from 'react';
 import './about.css';
+import placeholderImage from '../assets/placeholder.jpg';
 
 export function About() {
   return (
     <main className="container-fluid bg-secondary text-center">
       <div>
         <div id="picture" className="picture-box">
-          <img src="placeholder.jpg" alt="random" />
+          <img src={placeholderImage} alt="Simon game illustration" />
         </div>
 
         <p>

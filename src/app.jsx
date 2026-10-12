@@ -5,6 +5,7 @@ import { Login } from "./login/login";
 import { Play } from "./play/play";
 import { Scores } from "./scores/scores";
 import { About } from "./about/about";
+import { NotFound } from "./notfound/notfound";
 
 export default function App() {
   return (
@@ -64,8 +65,4 @@ export default function App() {
       </div>
     </BrowserRouter>
   );
-}
-
-function NotFound() {
-  return <main className="container-fluid bg-secondary text-center">404: Return to sender. Address unknown.</main>;
 }

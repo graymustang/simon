@@ -14,9 +14,8 @@
     "url": "git+https://github.com/graymustang/simon.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/graymustang/simon/issues"
   },

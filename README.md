@@ -92,3 +92,28 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Application elements** - I used a lot of `display:flex` to get things to align correctly.
 - [x] **Application text content** - Set all my text to Helvetica and it looks nice and clean.
 - [x] **Application images** - I left the about image as is.
+
+## 🚀 React Part 1 deliverable
+
+For this deliverable I put the Simon CSS pages into a React single-page app
+using Vite. Each page is a component, and React Router displays the Login, Play,
+Scores, About, and not-found views without full page reloads. The app includes
+Bootstrap styles and shared and page-specific CSS imports. Reactivity and game
+logic are deferred to the later JavaScript phase.
+
+- [x] **Vite, React, and Bootstrap installed** - `package.json` contains the
+  dependencies and Vite development, build, and preview scripts.
+- [x] **Vite project structure** - `index.html` loads `index.jsx`, which mounts
+  the app from `src/app.jsx`.
+- [x] **React components** - Login, Play, Scores, About, and NotFound are
+  separate components under `src/`.
+- [x] **React Router** - Routes are provided for `/`, `/play`, `/scores`, and
+  `/about`, with a catch-all not-found route.
+- [x] **CSS references** - Bootstrap and shared styles are imported by the app;
+  each styled page imports its own CSS file.
+- [x] **Owner and source link** - The app displays Bjorn Gray and links to
+  [graymustang/simon](https://github.com/graymustang/simon) from the home page
+  and footer.
+- [x] **Learning notes** - See [notes.md](notes.md).
+- [ ] **Production deployment** - Deploy with `deployReact.sh` to the Simon
+  service and verify the live Simon React URL before submitting.
