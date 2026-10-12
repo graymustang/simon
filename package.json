@@ -1,25 +1,26 @@
 {
   "name": "simon-react-p1",
   "version": "1.0.0",
-  "description": "[My Notes](notes.md)",
+  "description": "Simon React Part 1 routing project",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "author": "Bjorn Gray",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webprogramming260/simon-css.git"
+    "url": "git+https://github.com/graymustang/simon.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/webprogramming260/simon-css/issues"
+    "url": "https://github.com/graymustang/simon/issues"
   },
-  "homepage": "https://github.com/webprogramming260/simon-css#readme",
+  "homepage": "https://github.com/graymustang/simon#readme",
   "devDependencies": {
     "vite": "^8.3.3"
   },

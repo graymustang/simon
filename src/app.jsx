@@ -1,4 +1,6 @@
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./app.css";
 import { Login } from "./login/login";
 import { Play } from "./play/play";
 import { Scores } from "./scores/scores";
@@ -15,22 +17,22 @@ export default function App() {
             </div>
             <menu className="navbar-nav">
               <li className="nav-item">
-                <NavLink className="nav-link" to="">
+                <NavLink className="nav-link" to="/">
                   Login
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="play">
+                <NavLink className="nav-link" to="/play">
                   Play
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="scores">
+                <NavLink className="nav-link" to="/scores">
                   Scores
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="about">
+                <NavLink className="nav-link" to="/about">
                   About
                 </NavLink>
               </li>
@@ -39,7 +41,7 @@ export default function App() {
         </header>
 
         <Routes>
-          <Route path="/" element={<Login />} exact />
+          <Route path="/" element={<Login />} />
           <Route path="/play" element={<Play />} />
           <Route path="/scores" element={<Scores />} />
           <Route path="/about" element={<About />} />
@@ -48,12 +50,14 @@ export default function App() {
 
         <footer className="bg-dark text-white-50">
           <div className="container-fluid">
-            <span className="text-reset">Author Name(s)</span>
+            <span className="text-reset">Bjorn Gray</span>
             <a
               className="text-reset"
-              href="https://github.com/webprogramming260/simon-react"
+              href="https://github.com/graymustang/simon"
+              target="_blank"
+              rel="noreferrer"
             >
-              Source
+              GitHub source
             </a>
           </div>
         </footer>
