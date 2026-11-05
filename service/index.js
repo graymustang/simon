@@ -17,10 +17,48 @@ let scores = [];
 let apiRouter = express.Router();
 app.use('/api', apiRouter);
 
-app.get(/.*/, (_req, res) => {
-  res.send({ msg: 'Simon service' });
+// CreateAuth - create a new user
+apiRouter.post('/auth/create', async (req, res) => {
+  if (await findUser('email', req.body.email)) {
+    res.status(409).send({ msg: 'Existing user' });
+  } else {
+    const user = await createUser(req.body.email, req.body.password);
+
+    setAuthCookie(res, user.token);
+    res.send({ email: user.email });
+  }
 });
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+// Create user with a hashed password
+async function createUser(email, password) {
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  const user = {
+    email: email,
+    password: passwordHash,
+    token: uuid.v4(),
+  };
+
+  users.push(user);
+
+  return user;
+}
+
+async function findUser(field, value) {
+  if (!value) return null;
+
+  return users.find((u) => u[field] === value);
+}
+
+//authentication token
+function setAuthCookie(res, authToken) {
+  res.cookie(authCookieName, authToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+}
