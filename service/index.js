@@ -10,6 +10,7 @@ const authCookieName = 'token';
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static('public'));
 
 let users = [];
 let scores = [];
@@ -81,6 +82,15 @@ apiRouter.post('/score', verifyAuth, (req, res) => {
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
+});
+
+// Return the React application for frontend routes
+app.use((req, res) => {
+  if (req.path.startsWith('/api/')) {
+    return res.status(404).send({ msg: 'API endpoint not found' });
+  }
+
+  res.sendFile('index.html', { root: 'public' });
 });
 
 // Create user with a hashed password
