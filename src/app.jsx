@@ -6,8 +6,25 @@ import { Play } from "./play/play";
 import { Scores } from "./scores/scores";
 import { About } from "./about/about";
 import { NotFound } from "./notfound/notfound";
+import React from "react";
+import { AuthState } from "./login/authState";
 
 export default function App() {
+  const [userName, setUserName] = React.useState(
+    localStorage.getItem("userName") || "",
+  );
+
+  const [authState, setAuthState] = React.useState(
+    localStorage.getItem("userName")
+      ? AuthState.Authenticated
+      : AuthState.Unauthenticated,
+  );
+
+  function onAuthChange(userName, authState) {
+    setUserName(userName);
+    setAuthState(authState);
+  }
+
   return (
     <BrowserRouter>
       <div className="app-shell bg-dark text-light">
@@ -46,7 +63,7 @@ export default function App() {
         </header>
 
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={ <Login userName={userName} authState={authState} onAuthChange={onAuthChange}/>}/>
           <Route path="/play" element={<Play />} />
           <Route path="/scores" element={<Scores />} />
           <Route path="/about" element={<About />} />
