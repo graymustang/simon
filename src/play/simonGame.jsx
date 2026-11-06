@@ -15,6 +15,10 @@ export function SimonGame(props) {
   const [sequence, setSequence] = React.useState([]);
   const [playbackPos, setPlaybackPos] = React.useState(0);
 
+  React.useEffect(() => {
+    increaseSequence([]);
+  }, []);
+
   async function onPressed(buttonPosition) {
     if (allowPlayer) {
       setAllowPlayer(false);

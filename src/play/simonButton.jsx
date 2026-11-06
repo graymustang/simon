@@ -2,7 +2,7 @@ import React from 'react';
 import { delay } from './delay';
 
 export const SimonButton = React.forwardRef(({ position, onPressed }, ref) => {
-  const [lightOn, setLightOn] = React.useState(true);
+  const [lightOn, setLightOn] = React.useState(false);
   const sound = new Audio(`/${position}.mp3`);
 
   // Use "React Refs" to allow the parent to reach into the button component
